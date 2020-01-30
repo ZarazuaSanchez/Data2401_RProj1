@@ -46,15 +46,12 @@ star_data <- datasaurus_dozen %>%
 ggplot(data = star_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
-
-The dino data and the star data have similar r-values, -0.06447185 and -0.0629611, respectively, having the same order of magnitude.
-
 ```{r cor-star}
 star_data %>%
   summarize(r=cor(x,y))
 
 ```
-
+The dino data and the star data have similar r-values, -0.06447185 and -0.0629611, respectively. Take note that their are very similiar, approximately ~ 0.06. More importantly, the r-values are close to 0. With an r-value near 0, the datasets demonstrate numerically that its shape is not linear as well as graphically when we look at their plots.
 ### Exercise 4
 
 (Add code and narrative as needed. Note that two R chunks are given but they are not labeled. Use the convention from above to name them appropriately.)
